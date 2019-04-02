@@ -5,8 +5,9 @@ import actions from './actions';
 export default {
   namespaced: true,
   state: {
-    beers: [],
-    publicBeers: null
+    publicUsers: null,
+    user: null,
+    showBeersFromUserId: 'gRlqBjPmHUcDpgvP9MVtY7BNtz12'
   },
   getters,
   mutations,

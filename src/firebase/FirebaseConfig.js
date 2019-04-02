@@ -1,8 +1,12 @@
+/**
+ * Config file for our firebase instance
+ */
+
 export default {
-    apiKey: "AIzaSyA3N9_fG3ijD0zCVZvIeho1GyLTOuzoTZA",
-    authDomain: "trainr-29632.firebaseapp.com",
-    databaseURL: "https://trainr-29632.firebaseio.com",
-    projectId: "trainr-29632",
-    storageBucket: "trainr-29632.appspot.com",
-    messagingSenderId: "278137562329"
-}
+  apiKey: 'AIzaSyBLvK483gpZywnhF5un2s_dldDmeYc6jV0',
+  authDomain: 'beerapp-3a6ae.firebaseapp.com',
+  databaseURL: 'https://beerapp-3a6ae.firebaseio.com',
+  projectId: 'beerapp-3a6ae',
+  storageBucket: 'beerapp-3a6ae.appspot.com',
+  messagingSenderId: '204657710844'
+};

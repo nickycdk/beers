@@ -1,19 +1,26 @@
 <template>
-
 	<div>
-		<hello-world></hello-world>
+		<beer-list-select></beer-list-select>
+    <beer-list-filter></beer-list-filter>
+		<beer-list></beer-list>
 	</div>
-
 </template>
 
 <script>
-	// @ is an alias to /src
-	import HelloWorld from '@/components/HelloWorld.vue'
+	import BeerList from '../components/Public/BeerList';
+	import BeerListSelect from '../components/Public/BeerListSelect';
+  import BeerListFilter from '../components/Public/BeerListSort';
 
 	export default {
 		name: 'home',
 		components: {
-			HelloWorld
+      BeerListFilter,
+			BeerListSelect,
+			BeerList
+		},
+		mounted () {
+			this.$store.dispatch('beers/getBeers');
+			this.$store.dispatch('users/getUsers');
 		}
-	}
+	};
 </script>
