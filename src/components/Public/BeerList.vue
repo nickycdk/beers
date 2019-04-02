@@ -17,6 +17,7 @@
         </v-list-tile-action>
 			</v-list-tile>
 		</v-list>
+    <v-alert type="info" :value="true" v-if="publicBeers.length === 0">No beers are added to the list</v-alert>
 	</div>
 </template>
 

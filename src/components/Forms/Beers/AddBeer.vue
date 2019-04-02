@@ -36,7 +36,7 @@
       </v-card-text>
     </v-card>
     <div class="mt-4 mb-4">
-      <v-btn v-if="beer" @click="saveBeer">Add beer</v-btn>
+      <v-btn v-if="beer" color="success" @click="saveBeer">Add beer</v-btn>
     </div>
     <v-alert type="success" :value="true" v-if="isSaved">
       Your beer list have been saved
@@ -62,6 +62,13 @@
       ...mapGetters('beers', ['beers'])
     },
     methods: {
+      resetFormState () {
+        this.isSaved = null;
+        this.beer = null;
+        this.rating = 3;
+        this.addTofav = false;
+        this.enableComments = true;
+      },
       saveBeer () {
         this.isLoading = true;
 
@@ -79,10 +86,9 @@
             this.isLoading = false;
             this.isSaved = true;
 
-            // For resetting state and message to user
+            // Reset form state after 2 seconds
             setTimeout(() => {
-              this.isSaved = null;
-              this.beer = null;
+              this.resetFormState();
             }, 2000);
           }
         });
