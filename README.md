@@ -41,3 +41,14 @@ The main reason for using this is for fast prototyping, also the exercise was ab
 
 DEMO can be found at: https://beerapp-3a6ae.firebaseapp.com/#/
 
+### Login / Application
+At the moment, there are 2 active accounts created, which I created in my firebase backend
+
+Use one of these two to login to the dashboard:
+```
+nicky@wearewebstars.dk / demo1234
+```
+```
+casetest@impact.dk / demo1234
+```
+
