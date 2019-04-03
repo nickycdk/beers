@@ -16,9 +16,11 @@
         'sortBeersByName'
       ]),
       sortByRating () {
+        // Call mutation in store to sort beers by rating
         this.sortBeersByRating();
       },
       sortByName () {
+        // Call mutation in store to sort beers by name
         this.sortBeersByName();
       }
     }

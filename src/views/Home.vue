@@ -17,10 +17,6 @@
       BeerListFilter,
 			BeerListSelect,
 			BeerList
-		},
-		mounted () {
-			this.$store.dispatch('beers/getBeers');
-			this.$store.dispatch('users/getUsers');
 		}
 	};
 </script>

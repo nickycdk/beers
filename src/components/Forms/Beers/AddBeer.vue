@@ -69,6 +69,9 @@
         this.addTofav = false;
         this.enableComments = true;
       },
+      /**
+       * Save and add beer to users
+       */
       saveBeer () {
         this.isLoading = true;
 

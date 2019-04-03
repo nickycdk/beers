@@ -8,6 +8,7 @@
 			</v-layout>
 		</v-container>
 
+    <!-- App navigation -->
     <v-bottom-nav
       :active.sync="bottomNav"
       :value="true"
@@ -50,7 +51,7 @@
 	import { mapState } from 'vuex';
 	export default {
 		name: 'app-index',
-    data() {
+    data () {
 		  return {
 		    bottomNav: 'beers'
       }

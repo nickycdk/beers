@@ -11,6 +11,7 @@
 		name: 'beer-index',
     components: { AddBeer },
     mounted () {
+		  // Get all beers available from API
 			this.$store.dispatch('beers/getBeers');
 		}
 	};

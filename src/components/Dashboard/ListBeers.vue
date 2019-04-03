@@ -25,6 +25,7 @@
 		},
 		methods: {
 			removeBeer (beerId) {
+			  // remove beer from database/firebase
 				this.$store.dispatch('beers/removeBeer', beerId);
 			}
 		}

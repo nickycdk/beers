@@ -32,6 +32,9 @@
 		methods: {
 			onLogin (event) {
 				event.preventDefault();
+        /**
+         * Sign in user or show error message
+         */
 				this.$store.dispatch('users/signInUser', {
 					email: this.email,
 					password: this.password

@@ -38,12 +38,13 @@
     name: 'Beer',
     data () {
       return {
-        beerId: this.$route.params.beerId,
+        beerId: this.$route.params.beerId, // Get params from URL
         beer: null,
         commentMessage: null
       };
     },
     watch: {
+      // Watch publicBeers object, update beer matching the beerID if this changes
       'publicBeers': function (val) {
         if (val) {
           this.getBeerDataFromID();
@@ -57,9 +58,12 @@
       ...mapState('users', ['showBeersFromUserId'])
     },
     methods: {
+      // Add comment // TODO: Add comment functionality by storing comments in firebase // related to the userId
       addComment () {
         this.commentMessage = 'Sorry my friend, Nicky has yet to implement this functionality...';
       },
+
+      // Find beer from user
       getBeerDataFromID () {
         this.beer = this.publicBeers.find((beer) => {
           return parseInt(beer.id) === parseInt(this.beerId);
@@ -67,9 +71,14 @@
       }
     },
     created () {
+      /**
+       * Get beers from ID
+       */
       if (this.publicBeers) {
+        // If publicBeers already exist
         this.getBeerDataFromID();
       } else {
+        // If not, we'll retrieve all beers from the user
         this.$store.dispatch('beers/getBeersFromUserID', this.showBeersFromUserId);
       }
     }

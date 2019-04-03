@@ -18,7 +18,7 @@ export default {
     }
   },
   /**
-   * Save beer to firebase and store it in collection "beers", under the user
+   * Save beer to firebase and store it in collection "beers", to the logged in user
    * @param commit
    * @param payload
    * @returns {Promise<boolean|never>}

@@ -31,11 +31,21 @@
 			])
 		},
 		methods: {
+      /**
+       * Filter beerlist by user
+       * @param obj
+       */
 			updateBeerList (obj) {
+			  // Update beer list according to the user selected
 				this.$store.dispatch('beers/getBeersFromUserID', obj.userId);
 			}
 		},
+    created () {
+		  // Get all users
+      this.$store.dispatch('users/getUsers');
+    },
 		mounted () {
+		  // Set default userId, so we can display beers from that list
 			this.user.userId = this.showBeersFromUserId;
 		}
 	};

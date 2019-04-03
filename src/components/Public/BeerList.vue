@@ -17,7 +17,7 @@
         </v-list-tile-action>
 			</v-list-tile>
 		</v-list>
-    <v-alert type="info" :value="true" v-if="publicBeers.length === 0">No beers are added to the list</v-alert>
+    <v-alert type="info" :value="true" v-if="publicBeers && publicBeers.length === 0">No beers are added to the list</v-alert>
 	</div>
 </template>
 
@@ -27,6 +27,7 @@
 		name: 'BeerList',
 		methods: {
 			onBeerClick (beerId) {
+			  // Go to detail page of beer
 				this.$router.push({ name: 'beer', params: { beerId: beerId } });
 			}
 		},
@@ -37,6 +38,7 @@
 			...mapState('users', ['showBeersFromUserId'])
 		},
 		mounted () {
+		  // Get beers from user
 			this.$store.dispatch('beers/getBeersFromUserID', this.showBeersFromUserId);
 		}
 	};

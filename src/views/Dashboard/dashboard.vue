@@ -31,6 +31,7 @@
 			])
 		},
 		mounted () {
+		  // Get beers to user so we can list them on dashboard
 			this.$store.dispatch('beers/getBeersFromUserID', this.user.uid);
 		}
 	};
