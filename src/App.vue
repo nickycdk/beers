@@ -35,7 +35,7 @@
 
       <v-btn
         v-if="user"
-        to="/login"
+        to="/dashboard"
         color="#1976d2"
         flat
         value="dashboard">
