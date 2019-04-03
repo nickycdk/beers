@@ -51,6 +51,6 @@ Use one of these two to login to the dashboard:
 nicky@wearewebstars.dk / demo1234
 ```
 ```
-casetest@impact.dk / demo1234
+beer@lover.app  / demo1234
 ```
 
