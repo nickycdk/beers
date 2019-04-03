@@ -33,7 +33,7 @@ npm run lint
 
 ### Short about the project
 I chose to use Firebase/Firestore for authentication and as a backend to store all data. 
-I could have used localstorage, however, that is not persistent if the user clear application data.
+I could have used localstorage, however, that is not persistent if the user clears all application data.
 And for the fun of it, it was a good exercise to play around with firebase. 
 
 All styling is done by using #vuetifyjs, which is a component framework for VueJS. 
